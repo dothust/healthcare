@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Healthcare - Formulário</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="../css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-dark">
+  <form>
+
+
+
+
+
+    <!-- CARD IDENTIFICAÇÃO DO PACIENTE -->
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header"><b>Identificação do paciente</b></div>
+        <div class="card-body">
+          <div class="mb-3">
+              <div class="form-group">
+                <div class="form-label-group">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Nome do paciente" required="required" autofocus="autofocus">
+                <label for="name" style="cursor:auto">Nome do paciente</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                      <label for="example-date-input" class="col-2 col-form-label">Nascimento</label>
+                    <div>
+                      <input class="form-control" type="date" value="00/00/000" id="example-datetime-local-input">
+                    </div>
+                    <div class="col">
+                      <select class="custom-select" required>
+                        <option value="">Cor</option>
+                        <option value="1">Branca</option>
+                        <option value="2">Preta</option>
+                        <option value="3">Parda</option>
+                        <option value="4">Amarelo</option>
+                      </select> 
+                    </div>
+                </div>
+              </div>
+              <fieldset class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Sexo</legend>
+                  <div class="col-sm-10 row">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <label class="form-check-label" for="gridRadios1">
+                        Masculino
+                      </label>&nbsp&nbsp&nbsp
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <label class="form-check-label" for="gridRadios2">
+                        Feminino
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <div class="form-label-group">
+                      <input type="text" name="pacEnf" id="pacEnf" class="form-control" placeholder="Enfermaria" required="required">
+                      <label for="pacEnf" style="cursor:auto">Enfermaria</label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-label-group">
+                      <input type="text" name="pacSetor" id="pacSetor" class="form-control" placeholder="Setor" required="required">
+                      <label for="pacSetor" style="cursor:auto">Setor</label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-label-group">
+                      <input type="pacLeito" name="pacLeito" id="pacLeito" class="form-control" placeholder="Leito" required="required">
+                      <label for="pacLeito" style="cursor:auto">Leito</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <label for="example-date-input" class="col-2 col-form-label">Internação</label>
+                  <div>
+                    <input class="form-control" type="date" value="00/00/000" id="example-date-input">
+                  </div>
+                  <div class="col">
+                      <input type="text" name="pacPront" id="pacPront" class="form-control" placeholder="Pronturário" required>
+                  </div>
+                </div>
+              </div>
+                <label for="validationTextarea">Diagnóstico médico</label>
+                <textarea class="form-control" id="validationTextarea" placeholder="Diagnóstico médico" required></textarea>
+              </div>
+          </div>
+        </div>
+     </div>
+
+
+
+
+
+
+
+
+
+    <!-- CARD HÍSTÓRICO DO PACIENTE -->
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header"><b>Histórico do paciente</b></div>
+        <div class="card-body">
+            <div class="form-group row">
+                <label class="col">Diabetes</label>
+                <div class="col">
+                  <div class="form-group-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> Tipo 1
+                    </label>
+                  </div>
+                  <div class="form-group-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck2"> Tipo 2
+                    </label>
+                  </div>
+                </div>
+              <div class="col text-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Hipertensão
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3 text-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Tabagismo
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3 text-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Alcoolismo
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Doença Hematológica
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Doença Vascular
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Doença Neurológica
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Insuficiência Renal
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Pneumopatia
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    D. Reumatológica
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Doença Oncológica
+                  </label>
+                </div>
+              </div>
+                <div class="col-sm-8">
+                  <input type="text" name="pacPront" id="pacPront" class="form-control" placeholder="Alergia" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-3">Medicamentos:</label>
+                <div class="col">
+                  <div class="form-group-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Vasopressor
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Imunosupressor
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Quimioterápico
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col"> </label>
+                <div class="col">
+                  <div class="form-group-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Anti-inflamatório
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Anti-coagulante
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                </div>
+              </div><br>
+              <div class="form-group row">
+                <label class="col"> Outros:</label>
+                  <div class="col-md-10">
+                  <input type="text" name="pacPront" id="pacPront" class="form-control" placeholder="Outros medicamentos..." required>
+                </div>
+              </div> 
+        </div> 
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- CARD MOBILIDADE -->
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header"><b>Mobilidade</b></div>
+        <div class="card-body">
+            <div class="form-group row">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Deambula
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Movimentação de 4 membros
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Deambula com auxílio
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Movimentação de 2 membros
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Não deambula
+                  </label>
+                </div>
+              </div>
+                <div class="col offset-2">
+                  <input type="text" name="pacPront" id="pacPront" class="form-control" placeholder="Qual?" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1">
+                    <label class="form-check-label" for="gridCheck1">
+                      Ausência de movimentação
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- CARD PADRÃO NUTRICIONAL -->
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header"><b>Padrão Nutricional</b></div>
+        <div class="card-body">
+          <div class="form-group row">
+            <label class="col-1">Via</label>
+            <div class="col-2">
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> Oral
+                </label>
+              </div>
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck2"> Enteral
+                </label>
+              </div>
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck3"> Parenteral
+                </label>
+              </div>
+            </div>
+            <div class="col-9">
+              <input type="text" name="pacPront" id="pacPront" class="form-control" placeholder="Tipo..." required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  Eutrófico
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  Emagrecido
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  Caquexia
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  Sobrepeso
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  Obesidade
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  Edema
+                </label>
+              </div>
+            </div>
+          </div>
+          <label for="validationTextarea">Restrições</label>
+          <textarea class="form-control" id="validationTextarea" placeholder="Restrições nutricionais..." required></textarea>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- CARD ESCALA DE DOR -->
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header"><b>Escala de dor</b></div>
+        <div class="card-body">
+          <div class="form-group row">
+            <div class="col">
+              <img src="../pain_scale.jpg" class="img-fluid" alt="Escala de dor">
+              <input type="range" class="custom-range" min="0" max="10" step="1" id="customRange1">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  <!-- CARD ELIMINAÇÂO FISIOLÓGICA -->
+
+  <div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header"><b>Eliminação Fisiológica</b></div>
+      <div class="card-body">
+          <div class="form-group row">
+            <label class="col-2">Urinária:</label>
+            <div class="col">
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> Espontânea
+                </label>
+              </div>
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> Fralda
+                </label>
+              </div>
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> Jontex
+                </label>
+              </div>
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> CVD
+                </label>
+              </div>
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> CIV
+                </label>
+              </div>
+            </div>
+            <label class="col-2">Intestinal:</label>
+            <div class="col">
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> Normal
+                </label>
+              </div>
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> Diarréia
+                </label>
+              </div>
+              <div class="form-group-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="gridCheck" id="gridCheck1"> Constipação
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header"><b>Estado Tegumentar</b></div>
+        <div class="card-body">
+          <form>
+            <div class="form-group row">
+              <label class="col-2">Pelos:</label>
+              <div class="col-1">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio1"> Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-1">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio2"> Não
+                  </label>
+                </div>
+              </div>
+              <div class="col-8">
+                <input type="text" name="pacPront" id="pacPront" class="form-control" placeholder="Localização" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2">Prurido:</label>
+              <div class="col-1">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio1"> Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-1">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio2"> Não
+                  </label>
+                </div>
+              </div>
+              <div class="col-8">
+                <input type="text" name="pacPront" id="pacPront" class="form-control" placeholder="Localização" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2">Hidratada:</label>
+              <div class="col-1">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio1"> Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-1">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio2"> Não
+                  </label>
+                </div>
+              </div>
+              <label class="col-2">Equimose:</label>
+              <div class="col-1">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio1"> Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-1">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio2"> Não
+                  </label>
+                </div>
+              </div>
+              <div class="col-4">
+                <input type="text" name="pacPront" id="pacPront" class="form-control" placeholder="Descrição..." required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2">Hidratada:</label>
+              <div class="col-1">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio1"> Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio2"> Não
+                  </label>
+                </div>
+              </div>
+              <label class="col-2">Equimose:</label>
+              <div class="col-2">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio1"> Normal
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadio2"> Diminuida
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Hidratada
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Ressecada
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Desidratada
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Edema
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Anasarca
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header"><b>Escala de Braden</b></div>
+        <div class="card-body">
+          <div class="form-group row">
+            <div class="col">
+              <img src="../braden_scale.png" class="img-fluid" alt="Escala de dor">
+              <br>
+              <div class="form-group row">
+                <div class="col">
+                  <div class="form-check text-center">
+                    <input class="form-check-input" type="radio" id="gridRadio1" name="gridRadio">
+                    <label class="form-check-label" for="gridRadio2">
+                      ≤16 Ato Risco
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check text-center">
+                    <input class="form-check-input" type="radio" id="gridRadio2" name="gridRadio">
+                    <label class="form-check-label" for="gridRadio2">
+                      13-14 Risco Moderado
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check text-center">
+                    <input class="form-check-input" type="radio" id="gridRadio3" name="gridRadio">
+                    <label class="form-check-label" for="gridRadio2">
+                      15-16 Baixo Risco
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check text-center">
+                    <input class="form-check-input" type="radio" id="gridRadio4" name="gridRadio">
+                    <label class="form-check-label" for="gridRadio2">
+                      ≥16 Sem Risco
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header"><b>Avaliação da Lesão</b></div>
+        <div class="card-body">
+          <div class="form-group row">
+            <div class="col">
+              <img src="../human_body.jpg" class="img-fluid" alt="Corpo Humano">
+              <label for="validationTextarea">Avaliação da Lesão</label>
+              <textarea class="form-control" id="validationTextarea" rows="5" placeholder="Tipo de lesão, localização, estágio, tamanho, leito, exsudato-quantidade, aspecto e odor, bordas e sinais de infecção..." required></textarea>
+              <br>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                <label class="custom-file-label" for="customFileLang">Selecionar Imagem</label>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="col-sm-12 text-center" >
+              <input type="submit" name="x2" value="Enviar" class="btn btn-primary btn-lg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/bootstrap/js/multistep.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+</body>
+
+</html>
