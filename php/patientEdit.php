@@ -1,31 +1,33 @@
 <?php
 
-  if(!isset($_SESSION))
-    session_start();
+if (!isset($_SESSION))
+  session_start();
 
 
-  include("connection.php");
+include("connection.php");
 
-  // Registro dos dados
+// Registro dos dados
 
 
 
-  $pac_nome = mysqli_real_escape_string ($connection, trim($_POST['pac_nome']));
-  //$pac_idade = mysqli_real_escape_string ($connection, trim($_SESSION['NOW()']));
-  //$senha = mysqli_real_escape_string ($connection, trim(md5($_SESSION['senha'])));
+$query = mysqli_real_escape_string($connection, trim($_POST['nome']));
+//$pac_idade = mysqli_real_escape_string ($connection, trim($_SESSION['NOW()']));
+//$senha = mysqli_real_escape_string ($connection, trim(md5($_SESSION['senha'])));
 
-  $sql_code = "INSERT INTO paciente (pac_nome, pac_idade) VALUES ('$pac_nome', NOW())";
-  
-  $confirma = $connection->query($sql_code) or die ($connection->error);
+$sql = "INSERT INTO patient (nome, idade) VALUES ('$nome', NOW())";
 
-  if($confirma){
-    unset($_SESSION[pac_nome],
-    $_SESSION[pac_idade]);
-  }
+$confirm = $connection->query($sql) or die($connection->error);
 
-  // $id = $_GET['usuario'];
+if ($confirm) {
+  unset(
+    $_SESSION['nome'],
+    $_SESSION['idade']
+  );
+}
 
-  
+// $id = $_GET['user'];
+
+
 
 ?>
 
@@ -79,12 +81,12 @@
     </div>
   </div> -->
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
 </body>
 

@@ -81,7 +81,7 @@ session_start();
       unset($_SESSION['diferent_password']);
       ?>
       <div class="card-body">
-        <form method="post" action="vendor/reg.php">
+        <form method="post" action="php/userRegister.php">
           <div class="form-group">
             <div class="form-label-group">
               <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required="required" autofocus="autofocus">

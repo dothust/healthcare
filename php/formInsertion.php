@@ -15,7 +15,7 @@ $internacao = mysqli_real_escape_string($connection, trim($_POST['internacao']))
 $prontuario = mysqli_real_escape_string($connection, trim($_POST['prontuario']));
 $diagnostico = mysqli_real_escape_string($connection, trim($_POST['diagnostico']));
 
-$sql = "INSERT INTO paciente (
+$sql = "INSERT INTO patient (
     nome,
     nascimento,
     cor,
@@ -49,7 +49,7 @@ if ($connection->query($sql) === TRUE) {
 $connection->close();
 
 /* if ($senha == $password2) {
-	$sql = "SELECT COUNT(*) AS total FROM usuario WHERE email = '$email'";
+	$sql = "SELECT COUNT(*) AS total FROM user WHERE email = '$email'";
 	$result = mysqli_query($connection, $sql);
 	$row = mysqli_fetch_assoc($result);
 
@@ -59,7 +59,7 @@ $connection->close();
 		exit;
 	}
 
-	$sql = "INSERT INTO usuario (name, email, senha) VALUES ('$name', '$email', '$senha')";
+	$sql = "INSERT INTO user (name, email, senha) VALUES ('$name', '$email', '$senha')";
 
 	if ($connection->query($sql) === TRUE) {
 		$_SESSION['status'] = TRUE;

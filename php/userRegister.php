@@ -8,7 +8,7 @@ $senha = mysqli_real_escape_string($connection, trim(md5($_POST['senha'])));
 $password2 = mysqli_real_escape_string($connection, trim(md5($_POST['password2'])));
 
 if ($senha == $password2) {
-	$sql = "SELECT COUNT(*) AS total FROM usuario WHERE email = '$email'";
+	$sql = "SELECT COUNT(*) AS total FROM user WHERE email = '$email'";
 	$result = mysqli_query($connection, $sql);
 	$row = mysqli_fetch_assoc($result);
 
@@ -18,7 +18,7 @@ if ($senha == $password2) {
 		exit;
 	}
 
-	$sql = "INSERT INTO usuario (name, email, senha) VALUES ('$name', '$email', '$senha')";
+	$sql = "INSERT INTO user (name, email, senha) VALUES ('$name', '$email', '$senha')";
 
 	if ($connection->query($sql) === TRUE) {
 		$_SESSION['status'] = TRUE;

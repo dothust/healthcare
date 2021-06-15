@@ -1,8 +1,8 @@
 <?php
 if (!isset($_SESSION)) {
   session_start();
+  include("php/sessionVerifier.php");
 }
-include("vendor/verify.php");
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +34,7 @@ include("vendor/verify.php");
 </head>
 
 <body class="bg-dark">
-  <form method="POST" action="vendor/formInsertion.php">
+  <form method="POST" action="php/formInsertion.php">
 
     <!-- CARD IDENTIFICAÇÃO DO PACIENTE -->
 
@@ -58,10 +58,10 @@ include("vendor/verify.php");
                 <div class="col">
                   <select class="custom-select" name="cor" required>
                     <option value="">Cor</option>
-                    <option value="1">Branca</option>
-                    <option value="2">Preta</option>
-                    <option value="3">Parda</option>
-                    <option value="4">Amarelo</option>
+                    <option value="Branca">Branca</option>
+                    <option value="Preta">Preta</option>
+                    <option value="Parda">Parda</option>
+                    <option value="Amarelo">Amarelo</option>
                   </select>
                 </div>
               </div>
@@ -71,13 +71,13 @@ include("vendor/verify.php");
                 <legend class="col-form-label col-sm-2 pt-0">Sexo</legend>
                 <div class="col-sm-10 row">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino" checked>
+                    <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino" checked>
                     <label class="form-check-label" for="masculino">
                       Masculino
                     </label>&nbsp&nbsp&nbsp
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
+                    <input class="form-check-input" type="radio" name="sexo" id="feminino" value="Feminino">
                     <label class="form-check-label" for="feminino">
                       Feminino
                     </label>

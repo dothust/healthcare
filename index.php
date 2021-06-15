@@ -1,6 +1,8 @@
 <?php
-session_start();
-include("vendor/verify.php");
+if (!isset($_SESSION)) {
+  session_start();
+  include("php/sessionVerifier.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -132,162 +134,28 @@ include("vendor/verify.php");
 
       <div class="container-fluid">
 
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Painel de Controle</a>
-          </li>
-          <li class="breadcrumb-item active">Visão Geral</li>
-        </ol>
+        <main>
+          <?php
+          $page = "";
+          if (isset($_GET['page']) && !empty($_GET['page'])) {
+            $page = addslashes($_GET['page']);
+          }
 
-        <!-- Icon Cards-->
-        <div class="row">
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-primary o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fas fa-fw fa-heartbeat"></i>
-                </div>
-                <div class="mr-5">Pacientes</div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
-                <span class="float-left">Detalhes</span>
-                <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-warning o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fas fa-fw fa-plus-square"></i>
-                </div>
-                <div class="mr-5">2</div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
-                <span class="float-left">Detalhes</span>
-                <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-success o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fas fa-fw fa-user-md"></i>
-                </div>
-                <div class="mr-5">Usuários</div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
-                <span class="float-left">Detalhes</span>
-                <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-danger o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fas fa-fw fa-medkit"></i>
-                </div>
-                <div class="mr-5">4</div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
-                <span class="float-left">Detalhes</span>
-                <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
+          switch ($page) {
 
-        <!-- Area Chart Example-->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-chart-area"></i>
-            Gráfico
-          </div>
-          <div class="card-body">
-            <canvas id="myAreaChart" width="100%" height="30"></canvas>
-          </div>
-          <div class="card-footer small text-muted">Atualizado dia_da_semana às 23:59</div>
-        </div>
+            case 'patientRegister':
+              require 'patientRegister.php';
+              break;
 
-        <!-- DataTables Example -->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-table"></i>
-            Tabela de dados
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Nome</th>
-                    <th>Profissão</th>
-                    <th>Cidade</th>
-                    <th>Idade</th>
-                    <th>Entrada</th>
-                    <th>Salário</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th>Nome</th>
-                    <th>Profissão</th>
-                    <th>Cidade</th>
-                    <th>Idade</th>
-                    <th>Entrada</th>
-                    <th>Salário</th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  <tr>
-                    <td>Maurício</td>
-                    <td>Engenheiro da Computação</td>
-                    <td>Rio Grande</td>
-                    <td>22</td>
-                    <td>25/04/2018</td>
-                    <td>$320,800</td>
-                  </tr>
-                  <tr>
-                    <td>Diana</td>
-                    <td>Engenheira Eletricista</td>
-                    <td>Rio Grande</td>
-                    <td>40</td>
-                    <td>25/04/2018</td>
-                    <td>$320,800</td>
-                  </tr>
-                  <tr>
-                    <td>Fulano</td>
-                    <td>Autor</td>
-                    <td>São Paulo</td>
-                    <td>53</td>
-                    <td>25/04/2018</td>
-                    <td>$320,800</td>
-                  </tr>
-                  <tr>
-                    <td>Izabela</td>
-                    <td>Médica</td>
-                    <td>Rio Grande</td>
-                    <td>61</td>
-                    <td>25/04/2018</td>
-                    <td>$320,800</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="card-footer small text-muted">Atualizado dia_da_semana às 23:59</div>
-        </div>
+            case 'patientTable':
+              require 'patientTable.php';
+              break;
+
+            default:
+              require 'home.php';
+          }
+          ?>
+        </main>
 
       </div>
       <!-- /.container-fluid -->
@@ -325,7 +193,7 @@ include("vendor/verify.php");
         <div class="modal-body">Selecione "Sair" abaixo se você estiver pronto para encerrar sua sessão atual.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="vendor/logout.php">Sair</a>
+          <a class="btn btn-primary" href="php/userLogout.php">Sair</a>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
 $email = mysqli_real_escape_string($connection, $_POST['email']);
 $senha = mysqli_real_escape_string($connection, $_POST['senha']);
 
-$query = "SELECT id, email FROM usuario WHERE email = '{$email}' AND senha = md5('{$senha}')";
+$query = "SELECT id, email FROM user WHERE email = '{$email}' AND senha = md5('{$senha}')";
 $result = mysqli_query($connection, $query);
 $row = mysqli_num_rows($result);
 

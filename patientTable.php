@@ -3,12 +3,12 @@
 
 <?php
 session_start();
-include("vendor/connection.php");
-include_once("vendor/verify.php");
+include("php/connection.php");
+include_once("php/sessionVerifier.php");
 
 
-$consulta = "SELECT * FROM usuario";
-$con = $connection->query($consulta) or die($connection->error);
+$query = "SELECT * FROM patient";
+$con = $connection->query($query) or die($connection->error);
 
 
 ?>
@@ -155,7 +155,7 @@ $con = $connection->query($consulta) or die($connection->error);
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Tabela de dados
+            Tabela de datas
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -183,20 +183,16 @@ $con = $connection->query($consulta) or die($connection->error);
                 <tbody>
                   <?php
 
-                  while ($dado  = $con->fetch_array()) {
-                    # code...
-
-
-
+                  while ($data  = $con->fetch_array()) {
                   ?>
                     <tr>
-                      <td> <?php echo $dado["id"]; ?> </td>
-                      <td> <?php echo $dado["name"]; ?> </td>
-                      <td> <?php echo $dado["email"]; ?> </td>
-                      <td> <?php echo date("d/m/Y", strtotime($dado["pac_age"])); ?> </td>
-                      <td> <?php echo $dado["name"]; ?> </td>
-                      <td> <a href="pac_edit.php?id=<?php echo $dado["id"]; ?>"> Editar </a> |
-                        <a href="javascript: if(confirm('Tem certeza que deseja excluir o paciente <?php echo $dado["name"]; ?>')) location.href='pac_delete.php?id=<?php echo $dado["id"]; ?>';"> Excluir </a>
+                      <td> <?php echo $data["id"]; ?> </td>
+                      <td> <?php echo $data["nome"]; ?> </td>
+                      <td> <?php echo $data["nome"]; ?> </td>
+                      <td> <?php echo date("d/m/Y", strtotime($data["nascimento"])); ?> </td>
+                      <td> <?php echo $data["nome"]; ?> </td>
+                      <td> <a href="php/patientEdit.php?id=<?php echo $data["id"]; ?>"> Editar </a> |
+                        <a href="javascript: if(confirm('Tem certeza que deseja excluir o paciente <?php echo $data["nome"]; ?>')) location.href='php/patientDelete.php?id=<?php echo $data["id"]; ?>';"> Excluir </a>
                       </td>
                     </tr>
                   <?php

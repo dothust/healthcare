@@ -1,6 +1,6 @@
 <?php
 session_start();
-//include("vendor/log.php")
+//include("php/userLogin.php")
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ session_start();
       unset($_SESSION['error']);
       ?>
       <div class="card-body">
-        <form class="was-validated" method="POST" action="vendor/log.php">
+        <form class="was-validated" method="POST" action="php/userLogin.php">
           <div class="form-group">
             <div class="form-label-group">
               <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
