@@ -97,9 +97,9 @@ if (!isset($_SESSION)) {
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Painel de Controle</span>
+        <a class="nav-link" href="index.php">
+          <i class="fas fa-fw fa-home"></i>
+          <span>Home</span>
         </a>
       </li>
       <li class="nav-item dropdown">
@@ -161,13 +161,13 @@ if (!isset($_SESSION)) {
       <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->
-      <footer class="sticky-footer">
+      <!-- <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright © Healthcare 2019</span>
           </div>
         </div>
-      </footer>
+      </footer> -->
 
     </div>
     <!-- /.content-wrapper -->

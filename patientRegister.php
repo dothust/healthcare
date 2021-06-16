@@ -5,141 +5,94 @@ if (!isset($_SESSION)) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="index.php">Inserir Paciente</a>
+  </li>
+  <li class="breadcrumb-item active">Visão Geral</li>
+</ol>
 
-<head>
+<!-- CARD IDENTIFICAÇÃO DO PACIENTE -->
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+<form method="POST" action="php/formInsertion.php">
+  <div class="row mx-auto">
+    <div class="col-6" style="border:solid">
+      <hr>
+      <div class="form-group mt-2">
+        <label for="nome" class="col-form-label" style="cursor:auto">Nome do paciente</label>
+        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" required="required" autofocus="autofocus">
+      </div>
+      <div class="form-group row mb-4">
+        <div class="col-4">
+          <label for="nascimento" class="col-form-label" style="cursor:auto">Nascimento</label>
+          <input class="form-control" type="date" name="nascimento" id="nascimento" value="00/00/000">
+        </div>
+        <div class="col-4">
+          <label for="cor" class="col-form-label" style="cursor:auto">Cor</label>
+          <select class="custom-select" name="cor" required>
+            <option value=""></option>
+            <option value="Branca">Branca</option>
+            <option value="Preta">Preta</option>
+            <option value="Parda">Parda</option>
+            <option value="Amarelo">Amarelo</option>
+          </select>
+        </div>
 
-  <title>Healthcare - Formulário</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
-
-
-  <!-- SCRIPTS -->
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.rwdImageMaps.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="http://www.outsharked.com/scripts/jquery.imagemapster.js"></script>=
-
-</head>
-
-<body class="bg-dark">
-  <form method="POST" action="php/formInsertion.php">
-
-    <!-- CARD IDENTIFICAÇÃO DO PACIENTE -->
-
-    <div class="container">
-      <div class="card card-register mx-auto mt-5">
-        <div class="card-header"><b>Identificação do paciente</b></div>
-        <div class="card-body">
-          <div class="mb-3">
-            <div class="form-group">
-              <div class="form-label-group">
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome do paciente" required="required" autofocus="autofocus">
-                <label for="nome" style="cursor:auto">Nome do paciente</label>
-              </div>
+        <div class="col-4">
+          <div class="form-check row">
+            <label for="sexo" class="col-form-label" style="cursor:auto">Sexo</label>
+            <div class="mt-2">
+              <label>
+                <input id="sexo" name="sexo" type="radio" class="radio" value="Masculino" checked>
+                <span>Masculino</span>
+              </label>
+              <label>
+                <input id="sexo" name="sexo" type="radio" class="radio" value="Feminino">
+                <span>Feminino</span>
+              </label>
             </div>
-            <div class="form-group">
-              <div class="form-row">
-                <label for="nascimento" class="col-2 col-form-label">Nascimento</label>
-                <div>
-                  <input class="form-control" type="date" name="nascimento" id="nascimento" value="00/00/000">
-                </div>
-                <div class="col">
-                  <select class="custom-select" name="cor" required>
-                    <option value="">Cor</option>
-                    <option value="Branca">Branca</option>
-                    <option value="Preta">Preta</option>
-                    <option value="Parda">Parda</option>
-                    <option value="Amarelo">Amarelo</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <fieldset class="form-group">
-              <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Sexo</legend>
-                <div class="col-sm-10 row">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino" checked>
-                    <label class="form-check-label" for="masculino">
-                      Masculino
-                    </label>&nbsp&nbsp&nbsp
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sexo" id="feminino" value="Feminino">
-                    <label class="form-check-label" for="feminino">
-                      Feminino
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-            <div class="form-group">
-              <div class="form-row">
-                <div class="col-md-4">
-                  <div class="form-label-group">
-                    <input type="text" name="enfermaria" id="enfermaria" class="form-control" placeholder="Enfermaria" required="required">
-                    <label for="enfermaria" style="cursor:auto">Enfermaria</label>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-label-group">
-                    <input type="text" name="setor" id="setor" class="form-control" placeholder="Setor" required="required">
-                    <label for="setor" style="cursor:auto">Setor</label>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-label-group">
-                    <input type="leito" name="leito" id="leito" class="form-control" placeholder="Leito" required="required">
-                    <label for="leito" style="cursor:auto">Leito</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-row">
-                <label for="internacao" class="col-2 col-form-label">Internação</label>
-                <div>
-                  <input class="form-control" type="date" value="00/00/000" id="internacao" name="internacao">
-                </div>
-                <div class="col">
-                  <input type="text" name="prontuario" id="prontuario" class="form-control" placeholder="Prontuário" required="required">
-                </div>
-              </div>
-            </div>
-            <label for="diagnostico">Diagnóstico médico</label>
-            <textarea class="form-control" id="diagnostico" name="diagnostico" placeholder="Diagnóstico médico" required></textarea>
           </div>
         </div>
-        <input type="submit" name="Enviar" class="btn btn-primary btn-block">
+      </div>
+
+      <hr>
+
+      <div class="form-group row">
+        <div class="col-6 col-form-label">
+          <label for="enfermaria" style="cursor:auto">Enfermaria</label>
+          <input type="text" name="enfermaria" id="enfermaria" class="form-control" placeholder="Enfermaria" required="required">
+        </div>
+        <div class="col-6 col-form-label">
+          <label for="setor" style="cursor:auto">Setor</label>
+          <input type="text" name="setor" id="setor" class="form-control" placeholder="Setor" required="required">
+        </div>
+        <div class="col-6 col-form-label">
+          <label for="leito" style="cursor:auto">Leito</label>
+          <input type="leito" name="leito" id="leito" class="form-control" placeholder="Leito" required="required">
+        </div>
+        <div class="col-6 col-form-label">
+          <label for="prontuario" style="cursor:auto">Prontuário</label>
+          <input type="prontuario" name="prontuario" id="prontuario" class="form-control" placeholder="Prontuário" required="required">
+        </div>
+      </div>
+      <div class="form-group row my-4">
+        <label for="internacao" class="col-2 col-form-label">Internação:</label>
+        <div class="col-4">
+          <input class="form-control" type="date" value="00/00/000" id="internacao" name="internacao">
+        </div>
+      </div>
+      <hr>
+      <div class="mt-3">
+        <label for="diagnostico">Diagnóstico médico</label>
+        <textarea class="form-control" id="diagnostico" name="diagnostico" placeholder="Diagnóstico médico" rows="5" required></textarea>
+      </div>
+      <div>
+        <input type="submit" name="Enviar" class="my-3 btn btn-primary float-right">
       </div>
     </div>
-  </form>
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/bootstrap/js/multistep.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="scripts/jquery.rwdImageMaps.min.js"></script>
-
-
-
-
-</body>
-
-</html>
+    <div class="col-6" style="border:solid">
+      div bonitinha
+    </div>
+  </div>
+</form>
