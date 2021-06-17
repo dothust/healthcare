@@ -1,23 +1,23 @@
 <?php
 if (!isset($_SESSION)) {
   session_start();
-  include("php/sessionVerifier.php");
 }
+include("php/sessionVerifier.php");
 ?>
 
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="index.php">Inserir Paciente</a>
+    <a href="index.php?page=">Home</a>
   </li>
-  <li class="breadcrumb-item active">Visão Geral</li>
+  <li class="breadcrumb-item active">Inserir Paciente</li>
 </ol>
 
 <!-- CARD IDENTIFICAÇÃO DO PACIENTE -->
 
 <form method="POST" action="php/formInsertion.php">
   <div class="row mx-auto">
-    <div class="col-6" style="border:solid">
+    <div class="col-5 border border-secondary rounded">
       <hr>
       <div class="form-group mt-2">
         <label for="nome" class="col-form-label" style="cursor:auto">Nome do paciente</label>
@@ -91,7 +91,8 @@ if (!isset($_SESSION)) {
         <input type="submit" name="Enviar" class="my-3 btn btn-primary float-right">
       </div>
     </div>
-    <div class="col-6" style="border:solid">
+
+    <div class="col-7">
       div bonitinha
     </div>
   </div>

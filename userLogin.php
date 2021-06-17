@@ -1,6 +1,7 @@
 <?php
-session_start();
-//include("php/userLogin.php")
+if (!isset($_SESSION)) {
+  session_start();
+}
 ?>
 
 <!DOCTYPE html>
